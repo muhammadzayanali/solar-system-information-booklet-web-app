@@ -15,10 +15,10 @@ CORS(app, supports_credentials=True)
 app.secret_key = os.environ.get('SECRET_KEY') or os.urandom(24).hex()
 
 db_config = {
-    'host': os.environ.get('DB_HOST', 'localhost'),
-    'user': os.environ.get('DB_USER', 'root'),
-    'password': os.environ.get('DB_PASSWORD', 'earthcam@2'),
-    'database': os.environ.get('DB_NAME', 'databaseproject')
+    'host': os.environ.get('DB_HOST'),
+    'user': os.environ.get('DB_USER'),
+    'password': os.environ.get('DB_PASSWORD'),
+    'database': os.environ.get('DB_NAME')
 }
 
 def get_db():
